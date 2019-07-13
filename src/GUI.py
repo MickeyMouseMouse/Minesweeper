@@ -32,14 +32,14 @@ def aboutApp():
     if window.winfo_children().__len__() in (85, 260, 484):
         aboutWindow = Toplevel(window)
         aboutWindow.title("About Minesweeper")
-        aboutWindow.geometry("270x140")
+        aboutWindow.geometry("270x125")
         aboutWindow.resizable(False, False)
         aboutWindow.wm_geometry("+%d+%d" % 
                                   ((aboutWindow.winfo_screenwidth() / 2 - aboutWindow.winfo_reqwidth()), 
                                    (aboutWindow.winfo_screenheight() / 2 - aboutWindow.winfo_reqheight())))
         
-        labelInfo1 = Label(aboutWindow, text = "Minesweeper by Andrew Jeus", font=("", 18)).grid(row = 0, column = 0, padx = 10, pady = 10)
-        labelInfo2 = Label(aboutWindow, text = "Version 1.0 (12 July 2019)", font=("", 18)).grid(row = 1, column = 0)
+        _ = Label(aboutWindow, text = "Minesweeper by Andrew Jeus", font=("", 18)).grid(row = 0, column = 0, padx = 10, pady = 10)
+        _ = Label(aboutWindow, text = "Version 1.0 (12 July 2019)", font=("", 18)).grid(row = 1, column = 0)
         labelInfo3 = Label(aboutWindow, text = "View code in GitHub", font=("", 14))
         labelInfo3.grid(row = 2, column = 0, padx = 5, pady = 5)
         
@@ -59,7 +59,6 @@ menubar.add_cascade(label = "File", menu = fileMenu)
 fileMenu.add_command(label = "About Minesweeper", command = aboutApp)
 fileMenu.add_separator()
 fileMenu.add_command(label = "Exit", command = exit)
-window.config(menu = menubar)
 
 # coordinates for print squares, flags, mines, numbers in different modes
 easyModeSettings = [45, 16, 40, 24, 40, 20, 40, 20, 23, 19, 25, 19, 4, 34, 14, 9, 9, 35, 35, 22, 40, 22, 5, 4, 22, 40, 22, 22, 22, 25]
