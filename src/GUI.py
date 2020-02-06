@@ -1,12 +1,4 @@
-# used Python2
-# for Python3: 
-#    1) Tkinter -> tkinter 
-#    2) import tkFont -> from tkinter import font
-#    3) tkFont -> font
-#    4) small differences in window sizes
-
-from Tkinter import Tk, Button, Label, Menu, Toplevel, Canvas, IntVar
-import tkFont # for creation new font (underlined)
+from tkinter import Tk, Button, Label, Menu, Toplevel, Canvas, IntVar, font
 import webbrowser # for open GitHub
 import Model
 import time
@@ -44,7 +36,7 @@ def aboutApp():
         labelInfo3.grid(row = 2, column = 0, padx = 5, pady = 5)
         
         # my font for link to GitHub
-        myfont = tkFont.Font(labelInfo3, labelInfo3.cget("font"))
+        myfont = font.Font(labelInfo3, labelInfo3.cget("font"))
         myfont.configure(underline = True)
         labelInfo3.configure(font = myfont)
         
